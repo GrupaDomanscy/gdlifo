@@ -55,23 +55,6 @@ void gdlifo_list_push_back(gdlifo_list *gdlifo_list, int item) {
 
     // Modify last index and add the element to LIFO structure
     gdlifo_list->list[gdlifo_list->last_index] = item;
-
-//     Calculate if we need that much memory that is now used
-//    int total_items = gdlifo_list_get_total_items(gdlifo_list);
-//    int allocated_chunks = gdlifo_list->allocated_size / gdlifo_list->chunk_size;
-//    int required_chunks = total_items - 1 / gdlifo_list->chunk_size + 1;
-//
-//     If we don't need that much memory, reallocate it
-//    if (required_chunks < allocated_chunks)
-//    {
-//        gdlifo_list->allocated_size = required_chunks * gdlifo_list->chunk_size;
-//
-//        memmove(gdlifo_list->list + 0, gdlifo_list->list + gdlifo_list->first_index, total_items * sizeof(int));
-//        gdlifo_list->list = safe_realloc(gdlifo_list->list, gdlifo_list->allocated_size * sizeof(int));
-//
-//        gdlifo_list->first_index = 0;
-//        gdlifo_list->last_index = total_items - 1;
-//    }
 }
 
 int *gdlifo_list_get_next(gdlifo_list *gdlifo_list) {
