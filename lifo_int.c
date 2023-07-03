@@ -3,6 +3,15 @@
 #include "gdalloc.h"
 #include "lifo_int.h"
 
+void gdlifo_list_dynamic_init(gdlifo_list **dest, int chunk_size) {
+    *dest = safe_malloc(sizeof(gdlifo_list));
+    (*dest)->first_index = -1;
+    (*dest)->last_index = -1;
+    (*dest)->allocated_size = 0;
+    (*dest)->list = NULL;
+    (*dest)->chunk_size = chunk_size;
+}
+
 gdlifo_list gdlifo_list_init(int chunk_size) {
     gdlifo_list gdlifo_list;
     gdlifo_list.first_index = -1;

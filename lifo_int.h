@@ -13,6 +13,10 @@ typedef struct
     int chunk_size;
 } gdlifo_list;
 
+/**
+ * Dynamically initialize int list (uses malloc under the hood)
+ */
+void gdlifo_list_dynamic_init(gdlifo_list **dest, int chunk_size);
 
 /**
  * Initialize lifo int list
