@@ -1,4 +1,4 @@
-lib_version = 1.0.0
+lib_version = 1.1.0-rc.1
 
 all:
 	make clean
@@ -10,7 +10,7 @@ all:
 test:
 	make clean
 	mkdir -p build
-	gcc -g -Wall -Wextra -lgdalloc main.c lifo_int.c -o build/main
+	gcc -g -Wall -Wextra -lgdalloc -lcriterion main.c lifo_int.c -o build/main
 	./build/main
 
 install:

@@ -13,6 +13,7 @@ This library uses [GDALLOC](https://github.com/GrupaDomanscy/gdalloc) under the 
 
 You have to install dependencies first:
     - [GDALLOC](https://github.com/GrupaDomanscy/gdalloc)
+    - [CRITERION](https://github.com/Snaipe/Criterion)
 
 Then you run `make` and `sudo make install`
 
